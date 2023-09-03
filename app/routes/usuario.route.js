@@ -6,6 +6,5 @@ const router = express.Router();
 
 router.post('/cadastrar', Cadastrar);
 router.post('/acessar', Acessar);
-router.post('/rotaAutenticada',verificarToken,rotaAutenticada);
 
 export default router;

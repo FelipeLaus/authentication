@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import usuarioRoute from './app/routes/usuario.route.js';
+import cardRoute from './app/routes/card.models.js';
 
 const corsOptions = {
   origin: 'http://localhost:4200',
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/usuario', usuarioRoute);
+app.use('/api/card', cardRoute);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

@@ -13,6 +13,14 @@ const Card = db.define('Card', {
     type: DataTypes.STRING(500),
     allowNull: false,
   },
+  envidoEm: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  LidoEm: {
+    type: DataTypes.DATE,
+    allowNull: true,
+  },
 
 });
 

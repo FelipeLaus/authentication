@@ -4,4 +4,5 @@ import Card from './app/models/card.model.js'
 
 (async ()=>{
     await db.sync({force:true});
+    return;
 })();

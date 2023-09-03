@@ -1,5 +1,5 @@
 import Usuario from '../models/usuario.model.js';
-import {gerarToken} from '../controllers/auth.controller.js'
+import { gerarToken } from '../controllers/auth.controller.js'
 import { hash, compare } from 'bcrypt';
 import * as yup from 'yup';
 
@@ -96,4 +96,26 @@ export const Acessar = async (req, res) => {
             { message: error.errors },
         );
     };
+};
+
+export const findByPk = async (id) => {
+
+    Usuario.findByPk(id)
+        .then((user) => {
+            return user;
+        })
+        .catch((error) => {
+            return { message: error.message };
+        });
+};
+
+export const findAll = async () => {
+
+    Usuario.findAll()
+        .then((user) => {
+            return { user };
+        })
+        .catch((error) => {
+            return { message: error.message };
+        });
 };
